@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo Mono', sans-serif;
+}
+
+body {
+    background: #353940;
+    color: #E4EAF2;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #E4EAF2;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    
+    margin-left: 35px;
+}
+
+.navbar a.active{
+    
+    background: linear-gradient(white);
+}
+.navbar a:hover {
+    background: linear-gradient(45deg, #E4EAF2, #626973, #E4EAF2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    background-color: transparent;
+    max-width: 400px;
+}
+
+.home-content h1{
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 1.2; 
+
+}
+.home-content h3{
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+.home-content p {
+    font-size: 15px;
+    margin: 20px 0 40px;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 20px;
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px; 
+    z-index: 1;
+}
+
+.btn::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset:0;
+    background: linear-gradient(45deg, #353940, #626973, #E4EAF2); 
+    background-size: 200%;
+    background-position: 0 0;
+    z-index:-1;
+    border-radius: 40px;
+    filter: blur(5px);
+    transition: .5s ease;
+}   
+.btn:hover::before {
+    background-position: 0 0;
+}
+.btn::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset:0;
+    background: linear-gradient(45deg, #E4EAF2, #626973, #E4EAF2); 
+    background-position: 0 0;
+    background-size: 200%;
+    z-index:-1;
+    border-radius: 40px;
+    transition: .5s ease;
+}  
+
+.btn:hover::after {
+    background-position: 100% 0;
+}
+
+
+
+.home-img {
+    width: 410px;
+    height: 410px;
+    background: transparent;
+}
+
+.home-img .glowing-circle{
+    position: relative;
+    width:100%;
+    height: 100%;
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.home-img .glowing-circle::after{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #353940 ;
+    border-radius: 50%;
+
+}
+.glowing-circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #353940, #626973, #E4EAF2);
+    border-radius: 50%;
+}
+.glowing-circle span:nth-child(1) {
+    filter: blur(10px)
+}
+
+.glowing-circle .image{
+    position: relative;
+    width: 380px;
+    height: 380px; 
+    border-radius: 200px;
+    z-index: 1;
+    overflow: hidden;
+    
+
+}
+.image img {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    object-fit: cover;
+    
+}
+.home-sci a { 
+    
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    background: #E4EAF2; 
+    border: 2px solid #E4EAF2;
+    border-radius: 50%;
+    font-size: 31px;
+    color: #fff;
+    text-decoration: none;
+    margin: 20px 40px 0 0;
+    z-index: 1;
+    left: 500px;
+    right: 500px;
+    bottom: 80px;
+    
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0c1022;
+    border-radius: 50%;
+    z-index: -1;
+    transition: .5s ease;
+    
+}
+
+.home-sci a:hover:before{
+    filter: blur(5px);
+    
+
+}
+.home-sci a:hover::after{
+    transform:scale(0);
+    
+
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+*{
+    
+    font-family: 'Chivo Mono', sans-serif;
+}
+body {
+    margin-block: 60px;
+    
+    background: #353940;
+    list-style-type: none;
+    list-style: none;
+    color: #fff;
+    
+}
+
+.container {
+    
+    
+    border: 10px solid ;
+    padding: 0 0 0 0;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    
+    
+}
+.container_2 {
+    top: 100;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 100;
+    left: 100;
+    justify-content: center;
+}
+.container_3 {
+    
+    text-align: center;
+    list-style: none;
+    margin-bottom: 100;
+    left: 100;
+
+justify-content: center;
+}
